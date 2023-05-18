@@ -9,9 +9,10 @@ book details
 {%block main-content%}
 <h2>book details</h2>
 <ul>
-    <li>id: {{id}}</li>
-    <li>name: {{name}}</li>
-    <li>author: {{author}}</li>
-    <li>description: {{description}}</li>
+    <li>id: {{book.id}}</li>
+    <li>title: {{book.title}}</li>
+    <li>description: {{book.description}}</li>
+    <li>rating: {{book.rate}}</li>
+
 </ul>
 {%endblock%}

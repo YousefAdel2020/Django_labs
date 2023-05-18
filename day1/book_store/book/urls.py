@@ -9,7 +9,7 @@ urlpatterns = [
     path("",book_index,name="book-index"),
     path("<int:bid>/",book_details,name="book-details"),
     path('book_delete/<int:bid>', book_delete, name="book-delete"),
-    path('book_update/<int:bid>', book_update, name="book-update"),
+    path('book_update/<int:bid>/', book_update, name="book-update"),
     path('create/', book_create, name="book-create"),
     path('add/', add_book, name="create"),
 

@@ -10,6 +10,8 @@ create book
 <h2>create book</h2>
 <form method="post" action="{% url 'book:create' %}">
     {% csrf_token %}
+    {{ form.as_p }}
+    {% comment%}
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">name</label>
       <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -28,5 +30,17 @@ create book
       
 
     <button type="submit" class="btn btn-primary">Submit</button>
+
+    {% endcomment %}
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="text-center mt-5" style="display:inline">
+        <a href="{% url 'book:book-index'%}">
+            <button type="button" class="btn btn-info">
+                Back to book Index
+            </button>
+        </a>
+    </div>
+
   </form>
 {%endblock%}

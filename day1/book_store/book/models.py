@@ -6,3 +6,6 @@ class Book(models.Model):
     description=models.TextField("book description")
     rate=models.PositiveSmallIntegerField(default=0)
     views=models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return self.title

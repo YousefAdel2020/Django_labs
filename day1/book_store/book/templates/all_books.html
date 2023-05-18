@@ -12,9 +12,9 @@
     <thead>
       <tr>
         <th scope="col">ID</th>
-        <th scope="col">BOOK NAME</th>
-        <th scope="col">AUTHOR</th>
-        <th scope="col">DESCRIPTION</th>
+        <th scope="col">BOOK title</th>
+        <th scope="col">Rate</th>
+        <th scope="col">Description</th>
         <th scope="col">ACTIONS</th>
       </tr>
     </thead>
@@ -22,8 +22,8 @@
         {%for book in books%}
       <tr>
         <th scope="row">{{book.id}}</th>
-        <td>{{book.name}}</td>
-        <td>{{book.author}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.rate}}</td>
         <td>{{book.description| truncatewords:3|title}}</td>
         <td>
             <a class="btn btn-info" href="{% url 'book:book-details' book.id %}"> View</a>
